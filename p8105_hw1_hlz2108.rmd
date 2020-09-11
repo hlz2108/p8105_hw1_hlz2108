@@ -2,3 +2,41 @@
 title: "p8105_hw1_hlz2108"
 output: github_document
 ---
+
+# Problem 1
+The data chunk below creates a data frame comprised of:
+* a random sample of size 10 from a standard Normal distribution
+* a logical vector indicating whether elements of the sample are greater than 0
+* a character vector of length 10
+* a factor vector of length 10, with 3 different factor “levels”
+```{r Problem_1}
+library(tidyverse)
+
+p1_df = tibble(
+  samp = rnorm(10),
+  samp_pos = samp > 0,
+  samp_char = character(length = 10),
+  samp_factor = factor ((1:10), levels = c((0, 1, 2)))
+)
+```
+
+
+This code chunk applies the _as.numeric_ function to the logical, character, and factor variables.
+```{r As_Numeric eval = FALSE}
+
+```
+
+
+```{r}
+
+
+```
+
+# Problem 2
+data("penguins", package = "palmerpenguins")
+
+The variables in the dataset are `r v`.?
+The number of rows in the dataset is `r nrow`.
+The number of columns in the dataset is `r ncol`.
+The mean flipper length is `r mean(flipper_length_mm)`.
+
