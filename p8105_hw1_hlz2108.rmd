@@ -4,13 +4,13 @@ output: github_document
 ---
 
 This is my solution to HW1.
-```{r Library}
+```{r Library, echo = FALSE, message = FALSE}
 library(tidyverse)
 ```
 
-
 ## Problem 1
 The data chunk below creates a data frame comprised of:
+
 * a random sample of size 10 from a standard Normal distribution
 * a logical vector indicating whether elements of the sample are greater than 0
 * a character vector of length 10
@@ -26,7 +26,7 @@ prob1_df =
   )
 ```
 
-Take the mean of each variable in my data frame.
+Taking the mean of each variable in my data frame.
 
 ```{r mean_pull_var}
 mean(pull(prob1_df, samp))
@@ -38,7 +38,7 @@ mean(pull(prob1_df, factor_vec))
 I can take the mean of numbers and logical but not character or factor.
 
 
-This code chunk applies the _as.numeric_ function to the logical, character, and factor variables.
+This code chunk below applies the _as.numeric_ function to the logical, character, and factor variables.
 ```{r try_numeric}
 as.numeric(pull(prob1_df, samp))
 as.numeric(pull(prob1_df, samp_gt_0))
@@ -52,19 +52,23 @@ as.factor((pull(prob1_df, samp_gt_0))) * pull(prob1_df, samp)
 ```
 
 ## Problem 2
-```{r install_load_penguin}
-  install.packages("palmerpenguins")
-  data("penguins", package = "palmerpenguins")
+```{r load_penguin}
+data("penguins", package = "palmerpenguins")
 ```
 
-The variables in the dataset are `r str(penguins)`.
-The number of rows in the dataset is `r nrow`.
-The number of columns in the dataset is `r ncol`.
-The mean flipper length is `r mean(flipper_length_mm)`.
+The Penguin dataset contains the following variables: `r ls(penguins)`.
+
+The dataset contains the following structure: `r str(penguins)`
+
+The number of rows in the Penguin dataset is `r nrow(penguins)`.
+
+The number of columns in the Penguin dataset is `r ncol(penguins)`.
+
+The mean flipper length in mm is `r mean((pull(penguins, flipper_length_mm)), na.rm=TRUE)`.
 
 ```{r scatterplot_penguin}
 ggplot(penguins, aes (x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point() 
-
+ggsave("scatterplot_penguin.pdf")
 ```
 
 
