@@ -16,7 +16,7 @@ The data chunk below creates a data frame comprised of:
 * a character vector of length 10
 * a factor vector of length 10, with 3 different factor “levels”
 
-```{r}
+```{r create_df}
 prob1_df =
   tibble(
     samp = rnorm(10),
@@ -28,7 +28,7 @@ prob1_df =
 
 Take the mean of each variable in my data frame.
 
-```{r }
+```{r mean_pull_var}
 mean(pull(prob1_df, samp))
 mean(pull(prob1_df, samp_gt_0))
 mean(pull(prob1_df, char_vec))
@@ -39,7 +39,7 @@ I can take the mean of numbers and logical but not character or factor.
 
 
 This code chunk applies the _as.numeric_ function to the logical, character, and factor variables.
-```{r }
+```{r try_numeric}
 as.numeric(pull(prob1_df, samp))
 as.numeric(pull(prob1_df, samp_gt_0))
 as.numeric(pull(prob1_df, char_vec))
@@ -49,7 +49,6 @@ as.numeric(pull(prob1_df, factor_vec))
 ```{r}
 as.numeric((pull(prob1_df, samp_gt_0))) * pull(prob1_df, samp)
 as.factor((pull(prob1_df, samp_gt_0))) * pull(prob1_df, samp)
-
 ```
 
 ## Problem 2
