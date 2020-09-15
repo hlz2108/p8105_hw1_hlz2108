@@ -46,18 +46,18 @@ as.numeric(pull(prob1_df, char_vec))
 as.numeric(pull(prob1_df, factor_vec))
 ```
 
-```{r multiple_numeric eval = false}
+```{r multiple_numeric}
 as.numeric((pull(prob1_df, samp_gt_0))) * pull(prob1_df, samp)
 as.factor((pull(prob1_df, samp_gt_0))) * pull(prob1_df, samp)
 ```
 
 ## Problem 2
 ```{r install_load_penguin}
-install.packages("palmerpenguins")
-data("penguins", package = "palmerpenguins")
+  install.packages("palmerpenguins")
+  data("penguins", package = "palmerpenguins")
 ```
 
-The variables in the dataset are `r v`.?
+The variables in the dataset are `r str(penguins)`.
 The number of rows in the dataset is `r nrow`.
 The number of columns in the dataset is `r ncol`.
 The mean flipper length is `r mean(flipper_length_mm)`.
