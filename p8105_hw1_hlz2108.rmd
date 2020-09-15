@@ -3,7 +3,9 @@ title: "p8105_hw1_hlz2108"
 output: github_document
 ---
 
-# Problem 1
+This is my solution to HW1.
+
+## Problem 1
 The data chunk below creates a data frame comprised of:
 * a random sample of size 10 from a standard Normal distribution
 * a logical vector indicating whether elements of the sample are greater than 0
@@ -32,7 +34,7 @@ This code chunk applies the _as.numeric_ function to the logical, character, and
 
 ```
 
-# Problem 2
+## Problem 2
 data("penguins", package = "palmerpenguins")
 
 The variables in the dataset are `r v`.?
