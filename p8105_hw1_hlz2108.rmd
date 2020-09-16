@@ -58,13 +58,31 @@ data("penguins", package = "palmerpenguins")
 
 The Penguin dataset contains the following variables: `r ls(penguins)`.
 
-The dataset contains the following structure: `r str(penguins)`
+Bill Depth (mm) is a `r class(pull(penguins, bill_depth_mm))` variable.
+
+Bill Length (mm) is a `r class(pull(penguins, bill_length_mm))` variable.
+
+Body Mass (g) is a `r class(pull(penguins, body_mass_g))` variable.
+
+Flipper Length (mm) is a `r class(pull(penguins, flipper_length_mm))` variable.
+
+Island is a `r class(pull(penguins, island))` variable, which is broken into `r levels(pull(penguins, island))` islands.
+
+Sex is a `r class(pull(penguins, sex))` variable. The different categories for sex are `r levels(pull(penguins, sex))`.
+
+Species is a `r class(pull(penguins, species))` variable, which is broken into `r levels(pull(penguins, species))`.
+
+Year is a `r class(pull(penguins, year))` variable.
 
 The number of rows in the Penguin dataset is `r nrow(penguins)`.
 
 The number of columns in the Penguin dataset is `r ncol(penguins)`.
 
 The mean flipper length in mm is `r mean((pull(penguins, flipper_length_mm)), na.rm=TRUE)`.
+
+The full breakdown of the Penguin dataset is:
+
+  * `r summary(penguins)`
 
 ```{r scatterplot_penguin}
 ggplot(penguins, aes (x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point() 
