@@ -52,6 +52,7 @@ as.factor((pull(prob1_df, samp_gt_0))) * pull(prob1_df, samp)
 ```
 
 ## Problem 2
+The code chunk below loads the penguin dataset from the palmerpenguins package.
 ```{r load_penguin}
 data("penguins", package = "palmerpenguins")
 ```
@@ -88,5 +89,4 @@ The full breakdown of the Penguin dataset is:
 ggplot(penguins, aes (x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point() 
 ggsave("scatterplot_penguin.pdf")
 ```
-
 
