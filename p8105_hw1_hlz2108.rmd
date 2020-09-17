@@ -80,10 +80,6 @@ The number of columns (variables) in the Penguin dataset is `r ncol(penguins)`.
 
 The mean flipper length in mm is `r mean((pull(penguins, flipper_length_mm)), na.rm=TRUE)`.
 
-The full breakdown of the **Penguins** dataset is:
-
-  * `r summary(penguins)`
-
 This code chunk below generates a scatter plot for bill length and flipper length, each color represents a different species.
 ```{r scatterplot_penguin}
 ggplot(penguins, aes (x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point() + ggtitle("Bill and Flipper Length for Penguins by Species") + theme(plot.title = element_text(hjust = 0.5))
