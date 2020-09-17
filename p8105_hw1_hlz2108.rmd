@@ -70,7 +70,7 @@ Island is a `r class(pull(penguins, island))` variable, which is broken into `r 
 
 Sex is a `r class(pull(penguins, sex))` variable. The different categories for sex are `r levels(pull(penguins, sex))`.
 
-Species is a `r class(pull(penguins, species))` variable, which is broken into `r levels(pull(penguins, species))`.
+Species is a `r class(pull(penguins, species))` variable, which is broken into the species `r levels(pull(penguins, species))`.
 
 Year is a `r class(pull(penguins, year))` variable.
 
