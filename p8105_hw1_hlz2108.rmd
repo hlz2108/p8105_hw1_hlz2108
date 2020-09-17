@@ -58,13 +58,13 @@ data("penguins", package = "palmerpenguins")
 
 The **Penguins** dataset contains the following variables: `r ls(penguins)`.
 
-Bill Depth (mm) is a `r class(pull(penguins, bill_depth_mm))` variable. The mean bill depth (mm) is `r mean(pull(penguins, bill_depth_mm), na.rm=TRUE)`. Values for bill depth range from `r range(pull(penguins, bill_depth_mm), na.rm=TRUE)`.
+Bill Depth (mm) is a `r class(pull(penguins, bill_depth_mm))` variable. The mean bill depth (mm) is `r mean(pull(penguins, bill_depth_mm), na.rm=TRUE)`. Values for bill depth range from `r range(pull(penguins, bill_depth_mm), na.rm=TRUE)` (min, max). 
 
-Bill Length (mm) is a `r class(pull(penguins, bill_length_mm))` variable. The mean bill length (mm) is `r mean(pull(penguins, bill_length_mm), na.rm=TRUE)`. Values for bill length range from `r range(pull(penguins, bill_length_mm), na.rm=TRUE)`.
+Bill Length (mm) is a `r class(pull(penguins, bill_length_mm))` variable. The mean bill length (mm) is `r mean(pull(penguins, bill_length_mm), na.rm=TRUE)`. Values for bill length range from `r range(pull(penguins, bill_length_mm), na.rm=TRUE)` (min, max). 
 
-Body Mass (g) is a `r class(pull(penguins, body_mass_g))` variable. The mean body mass (g) is `r mean(pull(penguins, body_mass_g), na.rm=TRUE)`. Values for body mass range from `r range(pull(penguins, body_mass_g), na.rm=TRUE)`.
+Body Mass (g) is a `r class(pull(penguins, body_mass_g))` variable. The mean body mass (g) is `r mean(pull(penguins, body_mass_g), na.rm=TRUE)`. Values for body mass range from `r range(pull(penguins, body_mass_g), na.rm=TRUE)` (min, max).
 
-Flipper Length (mm) is a `r class(pull(penguins, flipper_length_mm))` variable. The mean flipper length in mm is `r mean(pull(penguins, flipper_length_mm), na.rm=TRUE)`. Values for flipper length range from `r range(pull(penguins, flipper_length_mm), na.rm=TRUE)`.
+Flipper Length (mm) is a `r class(pull(penguins, flipper_length_mm))` variable. The mean flipper length in mm is `r mean(pull(penguins, flipper_length_mm), na.rm=TRUE)`. Values for flipper length range from `r range(pull(penguins, flipper_length_mm), na.rm=TRUE)` (min, max).
 
 Island is a `r class(pull(penguins, island))` variable, which is broken into `r levels(pull(penguins, island))` islands.
 
