@@ -87,7 +87,8 @@ The full breakdown of the **Penguins** dataset is:
 
 This code chunk below generates a scatter plot for bill length and flipper length, each color represents a different species.
 ```{r scatterplot_penguin}
-ggplot(penguins, aes (x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point() 
+ggplot(penguins, aes (x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point() + ggtitle("Bill and Flipper Length for Penguins by Species")
+
 ggsave("scatterplot_penguin.pdf")
 ```
 
