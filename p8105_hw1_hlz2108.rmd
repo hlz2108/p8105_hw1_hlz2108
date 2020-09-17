@@ -80,7 +80,7 @@ The number of columns (variables) in the Penguin dataset is `r ncol(penguins)`.
 
 This code chunk below generates a scatter plot for bill length and flipper length, each color represents a different species.
 ```{r scatterplot_penguin}
-ggplot(penguins, aes (x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point() + ggtitle("Bill and Flipper Length for Penguins by Species") + theme(plot.title = element_text(hjust = 0.5))
+ggplot(penguins, aes (x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point() + ggtitle("Flipper Length vs. Bill Length for Penguins by Species") + theme(plot.title = element_text(hjust = 0.5))
 
 ggsave("scatterplot_penguin.pdf")
 ```
