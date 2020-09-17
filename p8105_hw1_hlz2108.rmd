@@ -4,7 +4,7 @@ output: github_document
 ---
 
 This is my solution to HW1.
-```{r Library, echo = FALSE, message = FALSE}
+```{r Library}
 library(tidyverse)
 ```
 
@@ -52,12 +52,12 @@ as.factor((pull(prob1_df, samp_gt_0))) * pull(prob1_df, samp)
 ```
 
 ## Problem 2
-The code chunk below loads the penguin dataset from the palmerpenguins package.
+The code chunk below loads the **Penguins** dataset from the _palmerpenguins_ package.
 ```{r load_penguin}
 data("penguins", package = "palmerpenguins")
 ```
 
-The Penguin dataset contains the following variables: `r ls(penguins)`.
+The **Penguins** dataset contains the following variables: `r ls(penguins)`.
 
 Bill Depth (mm) is a `r class(pull(penguins, bill_depth_mm))` variable.
 
@@ -75,16 +75,17 @@ Species is a `r class(pull(penguins, species))` variable, which is broken into `
 
 Year is a `r class(pull(penguins, year))` variable.
 
-The number of rows in the Penguin dataset is `r nrow(penguins)`.
+The number of rows (observations) in the Penguin dataset is `r nrow(penguins)`.
 
-The number of columns in the Penguin dataset is `r ncol(penguins)`.
+The number of columns (variables) in the Penguin dataset is `r ncol(penguins)`.
 
 The mean flipper length in mm is `r mean((pull(penguins, flipper_length_mm)), na.rm=TRUE)`.
 
-The full breakdown of the Penguin dataset is:
+The full breakdown of the **Penguins** dataset is:
 
   * `r summary(penguins)`
 
+This code chunk below generates a scatter plot for bill length and flipper length, each color represents a different species.
 ```{r scatterplot_penguin}
 ggplot(penguins, aes (x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point() 
 ggsave("scatterplot_penguin.pdf")
