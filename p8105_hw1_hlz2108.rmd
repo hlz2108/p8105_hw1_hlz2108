@@ -58,13 +58,13 @@ data("penguins", package = "palmerpenguins")
 
 The **Penguins** dataset contains the following variables: `r ls(penguins)`.
 
-Bill Depth (mm) is a `r class(pull(penguins, bill_depth_mm))` variable.
+Bill Depth (mm) is a `r class(pull(penguins, bill_depth_mm))` variable. The mean bill depth (mm) is `r mean(pull(penguins, bill_depth_mm), na.rm=TRUE)`. Values for bill depth range from `r range(pull(penguins, bill_depth_mm), na.rm=TRUE)`.
 
-Bill Length (mm) is a `r class(pull(penguins, bill_length_mm))` variable.
+Bill Length (mm) is a `r class(pull(penguins, bill_length_mm))` variable. The mean bill length (mm) is `r mean(pull(penguins, bill_length_mm), na.rm=TRUE)`. Values for bill length range from `r range(pull(penguins, bill_length_mm), na.rm=TRUE)`.
 
-Body Mass (g) is a `r class(pull(penguins, body_mass_g))` variable.
+Body Mass (g) is a `r class(pull(penguins, body_mass_g))` variable. The mean body mass (g) is `r mean(pull(penguins, body_mass_g), na.rm=TRUE)`. Values for body mass range from `r range(pull(penguins, body_mass_g), na.rm=TRUE)`.
 
-Flipper Length (mm) is a `r class(pull(penguins, flipper_length_mm))` variable.
+Flipper Length (mm) is a `r class(pull(penguins, flipper_length_mm))` variable. The mean flipper length in mm is `r mean(pull(penguins, flipper_length_mm), na.rm=TRUE)`. Values for flipper length range from `r range(pull(penguins, flipper_length_mm), na.rm=TRUE)`.
 
 Island is a `r class(pull(penguins, island))` variable, which is broken into `r levels(pull(penguins, island))` islands.
 
@@ -72,13 +72,13 @@ Sex is a `r class(pull(penguins, sex))` variable. The different categories for s
 
 Species is a `r class(pull(penguins, species))` variable, which is broken into the species `r levels(pull(penguins, species))`.
 
-Year is a `r class(pull(penguins, year))` variable.
+Year is a `r class(pull(penguins, year))` variable. The range for the years variable is from `r range(pull(penguins, year))`.
 
 The number of rows (observations) in the Penguin dataset is `r nrow(penguins)`.
 
 The number of columns (variables) in the Penguin dataset is `r ncol(penguins)`.
 
-The mean flipper length in mm is `r mean((pull(penguins, flipper_length_mm)), na.rm=TRUE)`.
+
 
 This code chunk below generates a scatter plot for bill length and flipper length, each color represents a different species.
 ```{r scatterplot_penguin}
